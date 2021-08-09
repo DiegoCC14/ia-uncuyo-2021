@@ -1,4 +1,4 @@
-#TP1 Fundamentos de la IA - LCC 2021
+#TP1 Fundamentos de la IA - LCC 2021 <h1>
 
 ###Diego Rinaldo Cazon Condori
 	
