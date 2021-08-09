@@ -1,6 +1,6 @@
 <h1> TP1 Fundamentos de la IA - LCC 2021 </h1>
 
-###Diego Rinaldo Cazon Condori
+<h4> Diego Rinaldo Cazon Condori </h4>
 	
 
 Los filosófos existían mucho antes que los computadores y llevaban tiempo intentando solucionar algunas cuestiones relacionadas con la
