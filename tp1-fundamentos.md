@@ -25,7 +25,7 @@ interlocutor un 30 por ciento del tiempo, este pasará la prueba. Algunas person
 gún programa se ha acercado al criterio del 30 por ciento frente a jueces con conocimiento, y el campo de la IA no ha prestado mucha atención a los tests de Turing. 
 
 
-IA fuerte: ¿pueden las máquinas pensar 
+<h2> IA fuerte: ¿pueden las máquinas pensar </h2>
 de verdad? 
 Muchos filósofos han afirmado que una máquina que pasa el Test de Turing no quiere
 decir que esté realmente pensando, sería solamente una simulación de la acción de 
@@ -37,8 +37,7 @@ sea relevante para la práctica de la IA. Coincidimos con Turing en que nos inte
 
 Podemos concluir diciendo que en algunos casos el comportamiento de un artefacto es importante, aunque en otros sea el pedigrí del artefacto lo que importa. Lo importante en cada caso parece ser una cuestión de convención. Sin embargo para las mentes artificiales, no existe una convención, y tenemos que depender de las intuiciones. 
 
-La ética y los riesgos de desarrollar 
-la Inteligencia Artificial 
+<h2> La ética y los riesgos de desarrollar la Inteligencia Artificial </h2>
 
 
 Hasta ahora nos hemos concentrado en si podemos desarrollar la IA, pero debemos también tener en cuenta si deberíamos hacerlo. Si es más probable que los efectos de la tecnología de la IA sean más negativos que positivos, sería responsabilidad moral de los trabajadores en su campo redirigir su investigación. Muchas de las nuevas tecnologías han tenido efectos negativos no intencionados , la fisión nuclear produjo el desastre de Chernobyl, la Isla de las Tres Millas y la amenaza de la destrucción mundial. Existe incluso un manual sobre la Ética de los Computadores. Sin embargo, La IA parece que expone problemas nuevos.
