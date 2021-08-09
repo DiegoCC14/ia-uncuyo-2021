@@ -3,8 +3,12 @@
 <h4> Nombre: Diego Rinaldo Cazon Condori </h4>
 
 Los filosófos existían mucho antes que los computadores y llevaban tiempo intentando solucionar algunas cuestiones relacionadas con la
-IA: ¿cómo trabaja la mente? ¿Es posible que las máquinas actúen de forma inteligente,igual que las personas? Y si así fuera, ¿tendrían mentes? ¿Cuáles son las implicaciones éticas de las máquinas inteligentes?.
-	Los filósofos definen la hipótesis de la IA débil como la afirmación de que es posible que las máquinas actúen con inteligencia de la misma manera, la hipótesis de la IA fuerte consiste en la afirmación de que las máquinas sí piensan realmente. La mayoría de los investigadores de IA dan por sentado la hipótesis de la IA débil, y no se preocupan por la hipótesis de la IA fuerte, con tal de que funcione su programa no les interesa si se llama simulación de inteligencia o inteligencia real. Sin embargo, todos deberían preocuparse por las implicaciones éticas de su trabajo.
+IA: 
+<li> ¿cómo trabaja la mente? </li>
+<i>¿Es posible que las máquinas actúen de forma inteligente,igual que las personas? Y si así fuera, ¿tendrían mentes?</i>
+¿Cuáles son las implicaciones éticas de las máquinas inteligentes?.
+
+Los filósofos definen la hipótesis de la IA débil como la afirmación de que es posible que las máquinas actúen con inteligencia de la misma manera, la hipótesis de la IA fuerte consiste en la afirmación de que las máquinas sí piensan realmente. La mayoría de los investigadores de IA dan por sentado la hipótesis de la IA débil, y no se preocupan por la hipótesis de la IA fuerte, con tal de que funcione su programa no les interesa si se llama simulación de inteligencia o inteligencia real. Sin embargo, todos deberían preocuparse por las implicaciones éticas de su trabajo.
 
 <h2> IA débil: ¿pueden las máquinas actuar con inteligencia? </h2>
 
