@@ -9,7 +9,7 @@ IA: ¿cómo trabaja la mente? ¿Es posible que las máquinas actúen de forma in
 
 IA débil: ¿pueden las máquinas actuar con inteligencia?
 
-	Obviamente, si la IA es imposible o no lo es, dependerá de cómo se defina. En esencia, la IA consiste en la búsqueda del mejor programa agente en una arquitectura dada. Con esta formulación, la IA es posible. Nuestra definición de IA funciona bien para el problema de encontrar un buen agente, dependiendo de la arquitectura. Sin
+Obviamente, si la IA es imposible o no lo es, dependerá de cómo se defina. En esencia, la IA consiste en la búsqueda del mejor programa agente en una arquitectura dada. Con esta formulación, la IA es posible. Nuestra definición de IA funciona bien para el problema de encontrar un buen agente, dependiendo de la arquitectura. Sin
 embargo, los filósofos están interesados en el problema de comparar dos arquitecturas,
 la humana y la de la máquina. Además, ellos por tradición han formulado la pregunta
 de la siguiente manera: ¿Pueden pensar las máquinas? ̈ Desgraciadamente, esta
@@ -32,18 +32,19 @@ Muchos filósofos han afirmado que una máquina que pasa el Test de Turing no qu
 decir que esté realmente pensando, sería solamente una simulación de la acción de 
 pensar. 
 La respuesta de Turing a esta objeción es interesante.Turing mantiene que la cuestión no está bien definida al decir, ¿Pueden pensar las máquinas? Además, por qué deberíamos insistir en un estándar más alto para las máquinas que el usado para los humanos. Después de todo, en la vida ordinaria no tenemos nunca una evidencia directa sobre los estados mentales internos de otras personas.
-	Turing reconoce que la cuestión de la conciencia es difícil, pero niega que
+
+Turing reconoce que la cuestión de la conciencia es difícil, pero niega que
 sea relevante para la práctica de la IA. Coincidimos con Turing en que nos interesa crear programas que se comporten de forma inteligente y no en si alguien los declara reales o simulados.
 
-	Podemos concluir diciendo que en algunos casos el comportamiento de un artefacto es importante, aunque en otros sea el pedigrí del artefacto lo que importa. Lo importante en cada caso parece ser una cuestión de convención. Sin embargo para las mentes artificiales, no existe una convención, y tenemos que depender de las intuiciones. 
+Podemos concluir diciendo que en algunos casos el comportamiento de un artefacto es importante, aunque en otros sea el pedigrí del artefacto lo que importa. Lo importante en cada caso parece ser una cuestión de convención. Sin embargo para las mentes artificiales, no existe una convención, y tenemos que depender de las intuiciones. 
 
 La ética y los riesgos de desarrollar 
 la Inteligencia Artificial 
 
 
-	Hasta ahora nos hemos concentrado en si podemos desarrollar la IA, pero debemos también tener en cuenta si deberíamos hacerlo. Si es más probable que los efectos de la tecnología de la IA sean más negativos que positivos, sería responsabilidad moral de los trabajadores en su campo redirigir su investigación. Muchas de las nuevas tecnologías han tenido efectos negativos no intencionados , la fisión nuclear produjo el desastre de Chernobyl, la Isla de las Tres Millas y la amenaza de la destrucción mundial. Existe incluso un manual sobre la Ética de los Computadores. Sin embargo, La IA parece que expone problemas nuevos.
+Hasta ahora nos hemos concentrado en si podemos desarrollar la IA, pero debemos también tener en cuenta si deberíamos hacerlo. Si es más probable que los efectos de la tecnología de la IA sean más negativos que positivos, sería responsabilidad moral de los trabajadores en su campo redirigir su investigación. Muchas de las nuevas tecnologías han tenido efectos negativos no intencionados , la fisión nuclear produjo el desastre de Chernobyl, la Isla de las Tres Millas y la amenaza de la destrucción mundial. Existe incluso un manual sobre la Ética de los Computadores. Sin embargo, La IA parece que expone problemas nuevos.
 
-	Las personas podrían perder sus trabajos por la automatización. La economía
+Las personas podrían perder sus trabajos por la automatización. La economía
 industrial moderna ha llegado a depender en general de los computadores, y selecciona programas de IA en particular. La automatización por medio de la tecnología de la IA ha creado más trabajos de los que ha eliminado, y ha creado puestos de trabajo más interesantes y mejor pagados. Ahora que el programa IA canónico es un agente inteligente diseñado para ayudar a un hombre, la pérdida de trabajo preocupa menos que cuando la IA se centraba en los sistemas expertos diseñados para sustituir a los hombres.
 
 Las personas podrían tener demasiado (o muy poco) tiempo de ocio. Alvin Toffler
