@@ -1,10 +1,8 @@
 <h1> TP1 Fundamentos de la IA - LCC 2021 </h1>
 
-<h4> Nombre: Diego Rinaldo Cazon Condori </h4>
-
 Los filosófos existían mucho antes que los computadores y llevaban tiempo intentando solucionar algunas cuestiones
 relacionadas con la IA: 
-  <li>¿cómo trabaja la mente? </li>
+  <li>¿cómo trabaja la mente?</li>
   <li>¿Es posible que las máquinas actúen de forma inteligente,igual que las personas? Y si así fuera, ¿tendrían mentes?</li>
   <li>¿Cuáles son las implicaciones éticas de las máquinas inteligentes?</li>
 <br>
@@ -18,8 +16,8 @@ la humana y la de la máquina. Además, ellos por tradición han formulado la pr
 de la siguiente manera: ¿Pueden pensar las máquinas? ̈ Desgraciadamente, esta
 cuestión no está bien definida. Para ver por qué, consideremos las dos cuestiones si-
 guientes:
-• ¿Pueden volar las máquinas?
-• ¿Pueden nadar las máquinas?
+<li> ¿Pueden volar las máquinas? </li>
+<li> ¿Pueden nadar las máquinas? </li>
 La mayoría de las personas están de acuerdo en que la respuesta a la primera cuestión
 es sí, que los aviones pueden volar, pero la respuesta a la segunda es no; los barcos y los submarinos se mueven por el agua, pero eso no es nadar. Sin embargo, ni las preguntas ni sus respuestas afectan en absoluto a las vidas laborales de los ingenieros aeronáuticos ni navales. Las respuestas no tienen mucho que ver con el diseño o con las características de los aviones o de los submarinos,  y sin embargo sí tienen que ver mucho más con la forma en que se han elegido utilizar
 las palabras. La posibilidad práctica de las “máquinas pensantes” lleva viviendo con nosotros durante sólo 50 años o así, tiempo insuficiente para que los angloparlantes se decidan a dar un significado a la palabra “pensar“.
