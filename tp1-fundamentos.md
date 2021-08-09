@@ -18,6 +18,7 @@ cuestión no está bien definida. Para ver por qué, consideremos las dos cuesti
 guientes:
 <li> ¿Pueden volar las máquinas? </li>
 <li> ¿Pueden nadar las máquinas? </li>
+<br>
 La mayoría de las personas están de acuerdo en que la respuesta a la primera cuestión
 es sí, que los aviones pueden volar, pero la respuesta a la segunda es no; los barcos y los submarinos se mueven por el agua, pero eso no es nadar. Sin embargo, ni las preguntas ni sus respuestas afectan en absoluto a las vidas laborales de los ingenieros aeronáuticos ni navales. Las respuestas no tienen mucho que ver con el diseño o con las características de los aviones o de los submarinos,  y sin embargo sí tienen que ver mucho más con la forma en que se han elegido utilizar
 las palabras. La posibilidad práctica de las “máquinas pensantes” lleva viviendo con nosotros durante sólo 50 años o así, tiempo insuficiente para que los angloparlantes se decidan a dar un significado a la palabra “pensar“.
