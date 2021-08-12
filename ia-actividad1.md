@@ -62,7 +62,7 @@ Integrantes:
       La inteligencia es una capacidad mental muy general que implica habilidad para razonar, planificar, resolver problemas, 
       pensar de forma abstracta, comprender ideas complejas, aprender con rapidez y aprender de la experiencia.
 
-      No supone el mero aprendizaje de un texto, una habilidad académica específica, o resolver test de forma habilidosa.
+        No supone el mero aprendizaje de un texto, una habilidad académica específica, o resolver test de forma habilidosa.
 
       Más bien refleja una capacidad amplia y profunda para la comprensión del entorno, para ser capaz de capturar el significado
       de las cosas y darles un sentido, o para ingeniárselas a la hora de saber qué hacer.
