@@ -5,7 +5,6 @@ Trabajo practico 1 - Actividad 1
 Integrantes: 
     • Diego Cazon
     • Federico Gimenez
-
     1. Buscar 2 ejemplos de aplicaciones de inteligencia artificial:
         a. Asistentes virtuales: Un asistente virtual es un agente de software que ayuda a usuarios de sistemas computacionales,
         automatizando y realizando tareas con la mínima interacción hombre-máquina.La interacción que se da entre un asistente virtual
@@ -17,8 +16,7 @@ Integrantes:
         de entrada de usuario, reconocimiento de ubicación y la habilidad de acceder a información de una variedad de recursos en línea
         (como al clima o al tráfico, noticias, precios de acciones, horario del usuario, precios al por menor, etc). Uno de los aspectos
         clave de un asistente personal inteligente es su habilidad para organizar y mantener información.
-
-        b. Anuncios personalizados: Sistemas de IA principalmente impulsados por buscadores y redes sociales, son aquellos que 
+     b. Anuncios personalizados: Sistemas de IA principalmente impulsados por buscadores y redes sociales, son aquellos que 
         analizan toda la información que disponen del usuario, para mostrarle anuncios con los que probablemente interactuará.
         La publicidad personalizada (anteriormente denominada "publicidad basada en intereses") es una potente herramienta para 
         mostrar anuncios más adecuados a los distintos usuarios y, con ello, mejorar el retorno de la inversión de los anunciantes.
@@ -47,16 +45,16 @@ Integrantes:
           • Actuar como las personas. Esta es la definición de McCarthy, donde el modelo a seguir para la evaluación de 
           los programas corresponde al comportamiento humano. El llamado Test de Turing (1950) también utiliza este punto
           de vista. El sistema Eliza, un bot (programa software) conversacional es un ejemplo de ello.
-
-          • Razonar como las personas. Lo importante es cómo se realiza el razonamiento y no el resultado de este
+        
+   • Razonar como las personas. Lo importante es cómo se realiza el razonamiento y no el resultado de este
           razonamiento. La propuesta aquí es desarrollar sistemas que razonen del mismo modo que las personas. La ciencia
           cognitiva utiliza este punto de vista.
 
-          • Razonar racionalmente. En este caso, la definición también se focaliza en el razonamiento, pero aquí se parte
+   • Razonar racionalmente. En este caso, la definición también se focaliza en el razonamiento, pero aquí se parte
           de la premisa de que existe una forma racional de razonar. La lógica permite la formalización del razonamiento 
           y se utiliza para este objetivo.
 
-          • Actuar racionalmente. De nuevo el objetivo son los resultados, pero ahora evaluados de forma objetiva. Por 
+   • Actuar racionalmente. De nuevo el objetivo son los resultados, pero ahora evaluados de forma objetiva. Por 
           ejemplo, el objetivo de un programa en un juego como el ajedrez será ganar. Para cumplir este objetivo es 
           indiferente la forma de calcular el resultado.
    3. ¿Qué se entiende por Inteligencia?
