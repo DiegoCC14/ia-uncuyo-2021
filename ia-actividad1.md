@@ -42,7 +42,8 @@ Integrantes:
       realizar tareas tales como identificar patrones en los datos de manera más eficiente que los seres humanos, 
       lo que permite a las empresas obtener más información sobre sus datos.
       Otras definiciones:
-          • Actuar como las personas. Esta es la definición de McCarthy, donde el modelo a seguir para la evaluación de 
+   
+   • Actuar como las personas. Esta es la definición de McCarthy, donde el modelo a seguir para la evaluación de 
           los programas corresponde al comportamiento humano. El llamado Test de Turing (1950) también utiliza este punto
           de vista. El sistema Eliza, un bot (programa software) conversacional es un ejemplo de ello.
         
