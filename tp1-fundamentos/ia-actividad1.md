@@ -1,5 +1,5 @@
-Licenciatura en Ciencias de la Computación
-Universidad Nacional de Cuyo
+<h1>Licenciatura en Ciencias de la Computación</h1>
+<h2>Universidad Nacional de Cuyo</h2>
 Inteligencia Artificial 2021
 Trabajo practico 1 - Actividad 1
 Integrantes: 
