@@ -1,10 +1,8 @@
 <h3>Jugar al CS </h3>
-<br>
+
 Performance<br>
-  <br>
-  -Eliminacion total del equipo contrario
-  <br>
-  -Cantidad de bajas
+  - Eliminacion total del equipo contrario
+  - Cantidad de bajas
 <br>
 Entorno
   <br>
