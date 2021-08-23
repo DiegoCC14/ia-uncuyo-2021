@@ -1,10 +1,15 @@
 <h3>Jugar al CS </h3>
-<p>
-Performance
+<br>
+Performance<br>
+  <br>
   -Eliminacion total del equipo contrario
+  <br>
   -Cantidad de bajas
+<br>
 Entorno
+  <br>
   -Tipo de Mapa
+  <br>
 Acciones
   -moverse (todas direcciones)
   -disparar
