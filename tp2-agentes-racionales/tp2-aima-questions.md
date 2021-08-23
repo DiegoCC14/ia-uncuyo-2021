@@ -1,3 +1,4 @@
+LIBRO: Inteligencia Artificial un Enfoque Moderno 2da Edicion
 10.a) segun el libro " Inteligencia Artificial un Enfoque Moderno", un agente racional actúa con la intención de
 maximizar el valor esperado de la medida de rendimiento, dada la secuencia de percepciones que ha observado hasta el momento.
 Entonces, para mi el agente reflexivo que controla a la aspiradora no seria un agente racional, ya que este actua aleatoriamente
