@@ -3,18 +3,16 @@
 Performance<br>
   - Eliminacion total del equipo contrario
   - Cantidad de bajas
-  - 
-<br>
 Entorno
   - Tipo de Mapa
-<br>
+
 Acciones
   - moverse (todas direcciones)
   - disparar
   - saltar
   - agacharse
   - colocar o desactivar bomba
-<br>
+
 Sensors
   - camara primera persona
 <br>
