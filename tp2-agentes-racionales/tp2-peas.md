@@ -1,4 +1,4 @@
-<h3> Jugar al CS </h3>
+<h3>Jugar al CS </h3>
 
 Performance
   -Eliminacion total del equipo contrario
@@ -29,7 +29,7 @@ Sensors
   -sonar
   -camaras
 
--> Practicar tenis contra una pared
+<h3>Practicar tenis contra una pared</h3>
 
   Performance
     -cantidad de pelotas golpeadas consecutivamente sin perder la pelota
@@ -42,7 +42,7 @@ Sensors
   Sensors
     - ojos 
     
--> Realizar salto en altura
+<h3>Realizar salto en altura</h3>
 
   Performance
     -altura saltada
@@ -56,7 +56,7 @@ Sensors
     -acelerometro
     -sensor de balance
 
--> Pujar un articulo en una subasta
+<h3>Pujar un articulo en una subasta</h3>
 
   Performance
     -comprar el articulo al menor precio posible
