@@ -4,67 +4,82 @@ Performance<br>
   - Eliminacion total del equipo contrario
   - Cantidad de bajas
   - 
+<br>
 Entorno
   - Tipo de Mapa
+<br>
 Acciones
   - moverse (todas direcciones)
   - disparar
   - saltar
   - agacharse
   - colocar o desactivar bomba
+<br>
 Sensors
   - camara primera persona
-  - 
+<br>
 <h3>Explorar los oceanos </h3>
-
+<br>
 Performance
   - cantidad de Km recorridos
+<br>
 Entorno
   - oceano
+<br>
 Acciones
   - sumergirse
   - activar luces
   - moverse adelante
+<br>
 Sensors
   - gps
   - sonar
   - camaras
 
 <h3>Practicar tenis contra una pared</h3>
-
+<br>
 Performance
   - cantidad de pelotas golpeadas consecutivamente sin perder la pelota
+<br>
 Entorno
   - pared
   - piso
+<br>
 Acciones
   - golpear
   - esperar
+<br>
 Sensors
   - ojos 
     
 <h3>Realizar salto en altura</h3>
-
-  Performance
+<br>
+Performance
   - altura saltada
-  Entorno
+<br>
+Entorno
   - Vara de medicion
-  Acciones
+<br>
+Acciones
   - saltar
   - correr
-  Sensors
+<br>
+Sensors
   - camara
   - acelerometro
   - sensor de balance
 
 <h3>Pujar un articulo en una subasta</h3>
-
-  Performance
+<br>
+Performance
   - comprar el articulo al menor precio posible
-  Entorno
+<br>
+Entorno
   - Subasta
-  Acciones
+<br>
+Acciones
   - pujar
   - no hacer nada
-  sensors
+<br>
+sensors
   - precio actual en la subasta 
