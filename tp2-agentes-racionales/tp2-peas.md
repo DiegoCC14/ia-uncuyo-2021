@@ -1,5 +1,5 @@
 <h3>Jugar al CS </h3>
-
+<p>
 Performance
   -Eliminacion total del equipo contrario
   -Cantidad de bajas
@@ -13,7 +13,7 @@ Acciones
   -colocar o desactivar bomba
 Sensors
   -camara primera persona
-
+</p>
 <h3>Explorar los oceanos </h3>
 
 Performance
