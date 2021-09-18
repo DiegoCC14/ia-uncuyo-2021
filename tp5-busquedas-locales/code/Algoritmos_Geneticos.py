@@ -293,3 +293,297 @@ class Agente():
 		
 		return Estados_Recorridos
 		#return estados
+
+class Agente_Genetico():
+	
+	def __init__( self , lista_pos_tableros ):
+		
+		self.tam_poblacion = len( lista_pos_tableros )
+		self.tam_tableros = len( lista_pos_tableros[0] )
+		
+		self.tableros = []
+		for nro_tablero in range( self.tam_poblacion ):
+			
+			dicc_pos_tablero = []
+			for pos in lista_pos_tableros[nro_tablero]:
+				dicc_pos_tablero.append( {"pos":pos , 'contador_atacado':0 } )
+			
+			self.tableros.append( { "reinas_atacadas_global":0 , 'posiciones':dicc_pos_tablero } )
+
+		for nro_tabero in range( self.tam_poblacion ): #Calculamos para todoos los tableros el danio entre estas
+			self.calcula_ataque_local_y_global_entre_reinas( nro_tabero )
+
+	def calcula_ataque_local_y_global_entre_reinas( self , nro_tabero ):
+		
+		ataque_global = 0
+		for reina in self.tableros[nro_tabero]["posiciones"]:
+			ataque_local = self.ataque_de_reinas_a_casilla( reina["pos"] , nro_tabero ) #Calcula la cantidad de reinas que atacan actualmente
+			reina["contador_atacado"] = ataque_local #seteamos la cantidad 
+			ataque_global += ataque_local
+		self.tableros[nro_tabero]["reinas_atacadas_global"] = ataque_global
+
+	def ataque_de_reinas_a_casilla( self , pos_casilla , nro_tabero ):
+		#Dado un nro de tablero, este metodo retorna el ataque global entre reinas
+		#La reina no puede encontrarse en la misma columna que la pos_casilla
+
+		contador_reinas_atacando = 0 #Contara cuantas reinas estan atacando
+		for reina in self.tableros[nro_tabero]["posiciones"]:
+
+			if reina["pos"][1] != pos_casilla[1] and self.casilla_atacada_por_reina( pos_casilla , reina["pos"] ): #Si la casilla se esta atacando entonces sumamos 1
+				contador_reinas_atacando +=1
+
+		return contador_reinas_atacando #Retornamos la cantidad de reinas atacando a la casilla #Retorna la cantidad de reinas que atacan la casilla 'pos_casilla'
+
+	def casilla_atacada_por_reina( self, casilla_1 , casilla_2  ): #Retorna True si las 2 casillas pueden estar siendo atacadas entre si. 
+		if casilla_1[0] == casilla_2[0] or casilla_1[1] == casilla_2[1]: #Se encuentran en la misma fila o columna, reina atacando
+			return True
+		if abs(casilla_1[0] - casilla_2[0]) == abs(casilla_1[1] - casilla_2[1]): #Se encuentran en la misma diagonal, reina atacando 
+			return True
+		return False
+
+	def mostrar_tablero( self , nro_tablero ):
+		tablero = Tablero( self.tam_tableros )
+		tablero.ingresar_Reinas( self.tableros[nro_tablero]["posiciones"] )
+		tablero.mostrarMatriz()
+
+	def mostrar_todos_los_tableros( self ):
+		for nro_tablero in range(self.tam_poblacion):
+			self.mostrar_tablero(nro_tablero) 
+	
+	def traer_los_n_menores( self , traer_n_primeros ):
+		lista_tablero_primeros = []
+		for tablero_actual in self.tableros:
+			
+			pos_ingresar = 0
+			for pos_tablero in range( len(lista_tablero_primeros) ):
+				tablero_comparar = lista_tablero_primeros[pos_tablero]
+				pos_ingresar +=1
+				if tablero_actual["reinas_atacadas_global"] < tablero_comparar["reinas_atacadas_global"]:
+					pos_ingresar = pos_tablero
+					break 
+
+			lista_tablero_primeros.insert(pos_ingresar,tablero_actual)
+		return lista_tablero_primeros[0:traer_n_primeros]
+
+	def cambiar_reina_de_posicion( self , pos_tablero , pos_reina , pos_destino ): #retorna copia de tablero
+		#Cambia de posicion una reina
+		pos_tab_copy = [] #TENEMOS PROBLEMAS CON REFERENCIA DE LISTA Y DICCIONARIOS
+		for reina in pos_tablero:
+			pos_tab_copy.append( reina.copy() ) 
+		
+		for reina in pos_tab_copy:
+			if reina["pos"] == pos_reina:
+				reina["pos"] = pos_destino
+				break
+		return pos_tab_copy
+	
+	def cambiar_posicion_entre_2_reinas(self , pos_tablero , pos_reina_1 , pos_reina_2):
+		nueva_pos_1 = ( pos_reina_2[0] , pos_reina_1[1] )
+		nueva_pos_2 = ( pos_reina_1[0] , pos_reina_2[1] )
+		pos_tablero_nuevo = self.cambiar_reina_de_posicion( pos_tablero.copy() , pos_reina_1 , nueva_pos_1 )
+		pos_tablero_nuevo = self.cambiar_reina_de_posicion( pos_tablero_nuevo.copy() , pos_reina_2 , nueva_pos_2 )
+		return pos_tablero_nuevo.copy()
+
+	def Problema_de_las_n_reinas_Genetico( self ):
+		
+		Minimo_Absoluto = False
+		Estados_Recorridos = 0
+
+		while Minimo_Absoluto == False:
+			#Traigo los n/2 menores de ataque global
+			tablero_mejor_adaptados = self.traer_los_n_menores( int( self.tam_poblacion/2) )  #Traigo a los 2 mejor puntuados, menos ataque global
+
+
+			if tablero_mejor_adaptados[0]["reinas_atacadas_global"] == 0: #Si de los traidos el primero tiene ataque cero entonces terminamos ejecucion
+				Minimo_Absoluto = True
+			else:
+
+				list_asignacion_hijos = []
+				for x in range( int(self.tam_poblacion/2) ): #Generamos la lista con 0 en las posiciones
+					list_asignacion_hijos.append(0)
+
+				hijos_disp = self.tam_poblacion
+				while hijos_disp > 0:
+
+					pos_padre = random.randint( 0 , int(self.tam_poblacion/2)-1 ) #A que padre se lo asignamos
+
+					if hijos_disp-1 >= 0:
+						list_asignacion_hijos[pos_padre] += 1
+					else:
+						list_asignacion_hijos[pos_padre] += 1
+					
+					hijos_disp -= 1
+
+				self.tableros = [] #Vacio todo los tableros y agrego los nuevos
+				x=0 #Tablero num x
+				for tablero in tablero_mejor_adaptados :
+					
+					for cant_hijos in range( list_asignacion_hijos[x] ):
+						num_random_1 = random.randint( 0,self.tam_tableros-1)
+						num_random_2 = random.randint( 0,self.tam_tableros-1)
+
+						pos_aleatoria_1 = tablero["posiciones"][num_random_1]["pos"]
+						pos_aleatoria_2 = tablero["posiciones"][num_random_2]["pos"]
+						
+						tablero_pos_nuevas = self.cambiar_posicion_entre_2_reinas( tablero["posiciones"] , pos_aleatoria_1 , pos_aleatoria_2 )
+
+						self.tableros.append( { "reinas_atacadas_global":0 , "posiciones": tablero_pos_nuevas } )
+
+					x+=1
+
+				for nro_tabero in range( self.tam_poblacion ): #Calculamos para todoos los tableros el danio entre estas
+					self.calcula_ataque_local_y_global_entre_reinas( nro_tabero )
+
+				Estados_Recorridos += 1
+		
+		return Estados_Recorridos
+
+
+def Crear_CSV( Nombre_Archivo , list_diccionario_datos ):
+	
+	Nombre_Archivo += ".csv" #Agregamos el CSV
+	with open( Nombre_Archivo , 'w') as csvfile:
+		spamwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_MINIMAL)
+
+		lista_nombre_columnas = [] #Ingresamos al CSV los nombres de las columnas que son de los diccionarios
+		for nombre_columnas in list_diccionario_datos[0]:
+			lista_nombre_columnas.append( nombre_columnas )
+		spamwriter.writerow(lista_nombre_columnas)
+
+		for dicc in list_diccionario_datos:
+			lista_fila = []
+			for nombre_columna in lista_nombre_columnas:
+				lista_fila.append( dicc[nombre_columna] )
+			spamwriter.writerow(lista_fila)
+
+def posicion_fila_reina_aleatorio( tamanio_filas ):
+	lista_numeros1 = []
+	lista_numeros2 = []
+	for x in range( tamanio_filas ):
+		lista_numeros1.append(x)
+		lista_numeros2.append(x)
+	
+	lista_par_ordenado = []
+	while lista_numeros1 != []:
+		num1 = random.randint(0,len(lista_numeros1)-1)
+		num2 = random.randint(0,len(lista_numeros2)-1)
+		x = lista_numeros1.pop(num1)
+		y = lista_numeros2.pop(num2)
+		lista_par_ordenado.append( (x,y) )
+	return lista_par_ordenado
+
+def Generar_Resultados_CSV_Bruto():
+
+	lista_resultados = []
+
+	for tam_tablero_actual in [4,8,10,12,15]:
+		
+		#Configuracion ====>>>
+		tam_tablero = tam_tablero_actual
+		tam_poblacion_AG = 90
+		#==================>>>
+
+		for x in range(30):
+			
+			inicio = time.time()
+
+			lista_posiciones = posicion_fila_reina_aleatorio( tam_tablero )	
+			
+			tablero = Tablero( tam_tablero )
+			agente = Agente( lista_posiciones )
+
+			Estados_Necesarios = agente.Problema_de_las_n_reinas_Hill_Climbing( tablero )
+			
+			fin = time.time()
+
+			dicc = {
+				"Algoritmo":"Hill Climbing",
+				'Tam_tablero': tam_tablero ,
+				'Estados_recorridos':Estados_Necesarios,
+				"Val_minimo": int(agente.reinas_atacadas_global/2),
+				'poblacion': "NA",
+				"time_seg": fin-inicio
+			}
+
+			lista_resultados.append( dicc )
+
+		for x in range(30):
+			
+			inicio = time.time()
+
+			lista_posiciones = posicion_fila_reina_aleatorio( tam_tablero )
+
+			tablero = Tablero( tam_tablero )
+			agente = Agente( lista_posiciones )
+
+			Estados_Necesarios = agente.Problema_de_las_n_reinas_Simulated_Annealing( tablero )
+			
+			fin = time.time()
+
+			dicc = {
+				"Algoritmo":"Simulated Annealing",
+				'Tam_tablero': tam_tablero ,
+				'Estados_recorridos':Estados_Necesarios,
+				"Val_minimo": 0 ,#El algoritmo llega al optimo
+				'poblacion': "NA",
+				"time_seg": fin-inicio
+			}
+
+			lista_resultados.append( dicc )
+		
+		for x in range(30):
+
+			inicio = time.time()
+
+			lista_pos_tableros = []
+			for x in range( tam_poblacion_AG ):
+				lista_pos_tableros.append( posicion_fila_reina_aleatorio( tam_tablero ) )
+
+			tablero = Tablero( tam_tablero )
+			agente = Agente_Genetico( lista_pos_tableros )
+
+			Estados_Necesarios = agente.Problema_de_las_n_reinas_Genetico()
+
+			fin = time.time()
+
+			dicc = {
+				"Algoritmo":"Algoritmo Genetico",
+				'Tam_tablero': tam_tablero ,
+				'Estados_recorridos':Estados_Necesarios,
+				"Val_minimo": 0 , #El algoritmo llega al optimo
+				'poblacion': tam_poblacion_AG,
+				"time_seg": fin-inicio
+			}
+
+			lista_resultados.append( dicc )
+
+	Crear_CSV( "Tabla_Resultados_Bruto" , lista_resultados )
+
+def Generar_Graficos_B():
+
+	with open('Tabla_Resultados_Bruto.csv') as filecsv:
+		csv_reader = csv.reader(filecsv, delimiter=',') 
+		nombre_columnas = True
+		
+		diccionario = { "Hill Climbing":[] , "Simulated Annealing":[] , "Algoritmo Genetico":[] }
+		for fila in csv_reader:
+
+			if nombre_columnas != True and fila[1]=="15": #Tabla 15
+				diccionario[fila[0]].append( float( fila[5] ) ) 
+			else:
+				nombre_columnas = False
+	'''
+	print( statistics.mean( diccionario['Hill Climbing'] ) ,' -- ', statistics.stdev( diccionario['Hill Climbing'] ) )
+	print( statistics.mean( diccionario['Simulated Annealing'] ) ,' -- ', statistics.stdev( diccionario['Simulated Annealing'] ) )
+	print( statistics.mean( diccionario['Algoritmo Genetico'] ) ,' -- ', statistics.stdev( diccionario['Algoritmo Genetico'] ) )
+	'''
+
+	data = [ diccionario['Hill Climbing'] , diccionario['Simulated Annealing'] , diccionario['Algoritmo Genetico'] ]
+	data = [ diccionario['Hill Climbing'] , diccionario['Simulated Annealing'] ]
+
+	plt.boxplot(data) 
+	plt.show()
+
+#Generar_Resultados_CSV_Bruto()
+
+#Generar_Graficos_B()
