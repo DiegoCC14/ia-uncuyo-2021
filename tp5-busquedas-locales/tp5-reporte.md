@@ -1,4 +1,4 @@
-<h3> A) - 2</h3>
+<h3> A) - 2 (Valores en Segundos)</h3>
 
 Tablero: 4<br>
 Promedio               --   Desviacion Estandar<br>
