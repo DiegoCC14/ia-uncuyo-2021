@@ -1,7 +1,12 @@
 <h3> A) - 1 (Valores en Segundos)</h3>
 
 - Los algoritmos SA y AG siempre llegan a la solucion optima de h=0
-- Para el algoritmo HC el porcentaje es de 
+- Para el algoritmo HC el porcentaje es:
+tabla 4: 0.966666
+tabla 8: 0.46666
+tabla 10: 0.2
+tabla 12: 0.166666
+tabla 15: 0.3
 <br>
 <h3> A) - 2 (Valores en Segundos)</h3>
 
