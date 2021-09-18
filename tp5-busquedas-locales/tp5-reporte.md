@@ -47,6 +47,6 @@ que el mas veloz es Hill Climbing
 los algoritmos que mas llegan a la solucion optima son AG y Simulated Annealing
 <br>
 Para concluir , creo que los el algoritmo que tiene buen tiempo de ejecucion y consigue la solucion optima , en mi caso seria Simulated Annealing, lo digo ya que
-Hill Climbing tiene el mejor tiempo aunque no siempre consigue el mejor resultado y AG consigue el mejor resultado , aun asi el peor tiempo.
+Hill Climbing tiene el mejor tiempo aunque no siempre consigue el mejor resultado y AG consigue el mejor resultado , aun asi el peor tiempo aun asi con AG podemos hacer uso de metodos de paralelizacion y disminuir el tiempo de ejecucion , por lo que podria ser una buena alternativa.
 
 <br>
