@@ -1,3 +1,8 @@
+<h3> A) - 1 (Valores en Segundos)</h3>
+
+- Los algoritmos SA y AG siempre llegan a la solucion optima de h=0
+- Para el algoritmo HC el porcentaje es de 
+<br>
 <h3> A) - 2 (Valores en Segundos)</h3>
 
 Tablero: 4<br>
@@ -26,6 +31,7 @@ HC: 0.006844727198282877  --  0.001675933150146594<br>
 SA: 0.02140528361002604  --  0.018577186397407484<br>
 AG: 1.5992175738016765  --  1.7217467917572173<br>
 
+<br>
 <h3> C) </h3>
 
 Simulated Annealing
