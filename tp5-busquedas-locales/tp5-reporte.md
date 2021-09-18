@@ -66,12 +66,6 @@ AG: 163.16666666666666  --  176.8057736873867<br>
 
 <h3> C) </h3>
 
-Simulated Annealing
-<br>
-Hill Climbing 
-<br>
-Agentes Geneticos
-
   Para ordenar por el tiempo de ejecucion en tableros grandes de 15x15, el orden seria 1)Hill Climbing , 2)Simulated Annealing , 3)Agentes Geneticos ,por lo
 que el mas veloz es Hill Climbing
 <br>
