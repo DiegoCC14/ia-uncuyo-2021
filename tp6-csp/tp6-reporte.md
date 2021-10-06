@@ -1,4 +1,4 @@
-1)
+<h2>1)</h2>
 
 Variables: Casillas del tablero vacias, que son del 1 al 9
 
@@ -6,7 +6,7 @@ Dominios: {1, 2, 3, 4, 5, 6, 7, 8, 9}
 
 Restriccion: 2 variables que se encuentren en la misma columna, fila o region (cuadrado) , segun las reglas , no pueden tener igual valor.
 
-2)
+<h2>2)</h2>
 
 La arco consistencia es un metodo que usamos para comprobar que en nuestro estado actual es posible encontrar solucion y que las restricciones aun se cumplen.
 
