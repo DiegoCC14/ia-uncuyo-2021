@@ -1,0 +1,119 @@
+#TP 7
+#Federico Gimenez
+#Diego Cazon Condori
+
+A - 1)
+```{r}
+data <- read_csv("data/arbolado-mza-dataset.csv") 
+trainIndex <- createDataPartition(as.factor(data$inclinacion_peligrosa), p=0.80, list=FALSE)
+data_train <- data[ trainIndex,]
+data_test <-  data[-trainIndex,]
+```
+
+A - 2-a)
+```{r}
+data_train %>% group_by(inclinacion_peligrosa) %>% summarise(total=n())
+```
+
+A - 2-b)
+```{r}
+#juntamos dos peticiones, una que cuenta el total por seccion y otra que que cuenta el total por seccion agrupada por inclinacion peligrosa
+sub2 <- merge(data_train %>% group_by(seccion) %>% summarise(total=n()),data_train %>% group_by(inclinacion_peligrosa,seccion) %>% summarise(total_inclinacion=n()),by="seccion")
+#con los datos anteriores podemos calcular los porcentajes y analizarlos
+sub2%>% mutate(prob=total_inclinacion/total) 
+```
+
+A - 2-c)
+```{r}
+data_train %>% group_by(inclinacion_peligrosa) %>% summarise(total=n())
+data_train %>% group_by(especie) %>% summarise(total=n())
+data_train %>% group_by(inclinacion_peligrosa,especie) %>% summarise(total=n())
+
+#juntamos dos peticiones, una que cuenta el total por especie y otra que que cuenta el total por especie agrupada por inclinacion peligrosa
+sub2 <- merge(data_train %>% group_by(especie) %>% summarise(total=n()),data_train %>% group_by(inclinacion_peligrosa,especie) %>% summarise(total_inclinacion=n()),by="especie")
+
+#con los datos anteriores podemos calcular los porcentajes y analizarlos
+
+sub3<- sub2%>%mutate(prob=total_inclinacion/total) 
+ordenado<- sub3[order(sub3$prob),]
+```
+
+A - 3-b)
+```{r}
+data<- read_csv("data_train.csv")
+hist(data$circ_tronco_cm/pi, xlab = "diametro", main="Histograma de diametro")
+```
+
+A - 3-c)
+```{r}
+hist(data$inclinacion_peligrosa, xlab = "inclinacion peligrosa", breaks = 2, labels = c("0","1"), main = "Histograma de inclinacion peligrosa")
+```
+
+A - 3-d)
+```{r}
+data_circ_categorical <- data %>% mutate(circ_tronco_cm_cat= ifelse(`circ_tronco_cm`<=100,'bajo',
+                                                               ifelse(`circ_tronco_cm`>100 & `circ_tronco_cm` <= 200, 'medio',
+                                                                      ifelse(`circ_tronco_cm` > 200 & `circ_tronco_cm` <= 300, 'alto','muy alto'))))
+
+write.csv(data_circ_categorical,"C:\\Users\\Fede\\Desktop\\arbolado-publico-mendoza-2021-circ_tronco_cm-train.csv")
+```
+
+A - 4-a)
+```{r}
+predictFunc<- function(recibida){
+  
+  final <- recibida %>% mutate(prediction_prob=runif(nrow(data_train),min=0,max(1)))
+  return(final)
+}
++
+data_train<- predictFunc(data_train)
+```
+
+A - 4-b)
+```{r}
+random_classifier<-function(recibida){
+  final <-recibida %>% mutate(prediction_class = ifelse(`prediction_prob` >= 0.5, 1 ,0))
+  return(final)
+}
+data_train <- random_classifier(data_train)
+```
+
+A - 4-d)
+```{r}
+TruePositive<- nrow(validation %>% filter(inclinacion_peligrosa==1 & prediction_class==1))
+
+TrueNegative<- nrow(validation %>% filter(inclinacion_peligrosa==0 & prediction_class==0))
+
+FalsePositive <- nrow(validation %>% filter(inclinacion_peligrosa==0 & prediction_class==1))
+
+FalseNegativo <-nrow(validation %>% filter(inclinacion_peligrosa==1 & prediction_class==0))
+```
+
+A - 5)
+```{r}
+mayority<-  data_train %>% group_by(inclinacion_peligrosa) %>% summarise(total=n())
+
+m<- max(mayority)
+
+#se debe establecer el prediction_class  de forma manual. Hay que buscar una forma de que se seleccione automaticamente
+biggerclass_classifier<- function(recibido){
+  
+  final <-recibido %>% mutate(prediction_class = 0)
+  return(final)
+}
+data2 <- biggerclass_classifier(data_train)
+
+
+TruePositive2<- nrow(data2 %>% filter(inclinacion_peligrosa==1 & prediction_class==1))
+
+TrueNegative2<- nrow(data2 %>% filter(inclinacion_peligrosa==0 & prediction_class==0))
+
+FalsePositive2 <- nrow(data2 %>% filter(inclinacion_peligrosa==0 & prediction_class==1))
+
+FalseNegativo2 <-nrow(data2 %>% filter(inclinacion_peligrosa==1 & prediction_class==0))
+```
+
+A - 6)
+```{r}
+confusionMatrix( factor(datos$inclinacion_peligrosa) , factor(datos$prediction_prob) , dnn=c('actual',"Prediccion") )
+```
