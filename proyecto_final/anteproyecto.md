@@ -9,6 +9,11 @@
   contenedor , tal como contenedores de barcos , camiones , aviones, todo vehiculo de transporte.
 </p3><br>
 
+<br>
+<img src="https://github.com/DiegoCC14/ia-uncuyo-2021/blob/main/proyecto_final/CajasEtapa.png" width="50%">
+<img src="https://github.com/DiegoCC14/ia-uncuyo-2021/blob/main/proyecto_final/Etapas_Carga.png" width="50%">
+<br>
+
 <p3>
 Este proyecto tratara de resolver un tipo de situacion en particular, ya que el problema mas general puede tardar, 
 en resolverse, mucho mas tiempo del que se dispone. 
