@@ -47,3 +47,11 @@ Actividades a Realizar:
 	- 7 dias , Armado del Informe final con los resultados obtenidos
 	- 8 dias , Armado de presentación 
 </p3>
+
+
+<p2>
+Blibliografia:
+	
+	- IA UN ENFOQUE MODERNO DE STUART J RUSELL 2 EDICION
+
+</p2>
