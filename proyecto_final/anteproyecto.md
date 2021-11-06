@@ -34,6 +34,8 @@ en resolverse, mucho mas tiempo del que se dispone.
 <p3>
   Tal algoritmo tiene que encontrar una buena organización de las cajas dentro de la caja del vehiculo y en mejor tiempo 
   que otros algoritmos como Backtracking y Fuerza Bruta.
+	
+	
 </p3>
 
 <br><br>
@@ -47,6 +49,11 @@ Actividades a Realizar:
 	- 7 dias , Armado del Informe final con los resultados obtenidos
 	- 8 dias , Armado de presentación 
 </p3>
+<p3>
+TIEMPO APROXIMADO : 26 dias <br>
+Diagrama Gantt:
+</p3>
+<img src="https://github.com/DiegoCC14/ia-uncuyo-2021/blob/main/proyecto_final/algo.PNG" width="100%">
 
 
 <p2>
