@@ -40,8 +40,10 @@ en resolverse, mucho mas tiempo del que se dispone.
 
 <br><br>
 <p3>
-Actividades a Realizar:
-
+TIEMPO APROXIMADO : 26 dias
+<br>
+Actividades a Realizar: 
+	
 	- 7 dias , Busqueda y recoleccion de informacion que tratan el problema
 	- 9 dias , Planteo de heuristica usando algoritmos de busqueda local
 	- 12 dias , Implementacion en Python del algoritmo propuesto
@@ -50,7 +52,7 @@ Actividades a Realizar:
 	- 8 dias , Armado de presentación 
 </p3>
 <p3>
-TIEMPO APROXIMADO : 26 dias <br>
+ <br>
 Diagrama Gantt:
 </p3>
 <img src="https://github.com/DiegoCC14/ia-uncuyo-2021/blob/main/proyecto_final/algo.PNG" width="100%">
